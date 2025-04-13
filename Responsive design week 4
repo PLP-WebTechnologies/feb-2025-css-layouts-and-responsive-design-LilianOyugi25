@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenEarth - Eco Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Navigation - Flexbox */
+        .navbar {
+            background-color: #2e8b57;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #d4f1c5;
+        }
+        
+        /* Main content - Grid */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: #f8fff8;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 1px solid #e1f5e0;
+        }
+        
+        .card h2 {
+            margin-bottom: 1rem;
+            color: #2e8b57;
+        }
+        
+        .hero {
+            background-color: #e1f5e0;
+            border: 2px solid #2e8b57;
+        }
+        
+        /* Footer - Flexbox */
+        footer {
+            background-color: #2e8b57;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        /* Media Queries */
+        @media (min-width: 600px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .navbar {
+                padding: 1rem 3rem;
+            }
+        }
+        
+        @media (min-width: 900px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .hero {
+                grid-column: 1 / 4;
+            }
+        }
+        
+        @media (max-width: 599px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        
+            .nav-links li {
+                margin: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">GreenEarth</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Eco Tips</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="card hero">
+            <h2>Join the Green Revolution</h2>
+            <p>Discover how small changes in your daily routine can make a big difference for our planet. Start with our simple eco-friendly swaps today!</p>
+        </div>
+        
+        <div class="card">
+            <h2>Reusable Water Bottles</h2>
+            <p>Save money and reduce plastic waste. Our stainless steel bottles keep drinks cold for 24 hours and hot for 12 hours.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Bamboo Toothbrushes</h2>
+            <p>Biodegradable and sustainable alternative to plastic toothbrushes. Each brush decomposes in 6 months versus 400 years for plastic.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Solar Chargers</h2>
+            <p>Harness the sun's energy to power your devices. Perfect for camping trips or everyday use to reduce electricity consumption.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Composting Kits</h2>
+            <p>Turn food scraps into nutrient-rich soil. Our beginner kits make composting easy even in small apartments.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Cloth Grocery Bags</h2>
+            <p>Durable, washable bags that fold into pocket size. One bag replaces hundreds of disposable plastic bags each year.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 GreenEarth Initiatives. Help us plant 1 million trees by 2025.</p>
+    </footer>
+</body>
+</html>
